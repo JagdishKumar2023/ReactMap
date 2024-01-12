@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import { HealthyBasic } from "./component/HealthyBasic";
+// import ClockHending from "./component/ClockHending";
+// import ClockMotive from "./component/ClockMotive";
+// import CurrentTime from "./component/CurrentTime";
 
 function App() {
+  let foodItems = [
+    "Dal",
+    "Green Vegi",
+    "Roti",
+    "Egg",
+    "Milk",
+    "Chiken",
+    "Meat",
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Healthy Food </h1>
+      <ul className="list-group">
+        {foodItems.map((elements) => (
+          <li className="list-1">{elements} </li>
+        ))}
+      </ul>
     </div>
   );
 }
